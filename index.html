@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Digestive System - Match the Following</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Human Digestive System</h1>
+            <p class="subtitle">Match the organs with their correct functions!</p>
+        </header>
+
+        <div class="game-area">
+            <svg id="connections" class="connections-layer"></svg>
+            <div class="column" id="col-a">
+                <!-- Organs will be injected here -->
+            </div>
+            <div class="column" id="col-b">
+                <!-- Functions will be injected here -->
+            </div>
+        </div>
+
+        <div class="controllers">
+            <button id="reset-btn" class="btn secondary">
+                <span class="icon">↺</span> Reset
+            </button>
+            <button id="check-btn" class="btn primary">
+                <span class="icon">✓</span> Check Answers
+            </button>
+            <button id="solve-btn" class="btn tertiary">
+                <span class="icon">👁</span> Show Answer Key
+            </button>
+            <button id="exit-btn" class="btn danger">
+                <span class="icon">✕</span> Exit
+            </button>
+        </div>
+
+        <div id="score-display" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
