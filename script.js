@@ -279,6 +279,59 @@ function showAnswerKey() {
     scoreDisplay.classList.remove('hidden');
 }
 
+// Social Logic
+const likeBtn = document.getElementById('like-btn');
+const dislikeBtn = document.getElementById('dislike-btn');
+const likeCountSpan = document.getElementById('like-count');
+const dislikeCountSpan = document.getElementById('dislike-count');
+
+let likeCount = 12; // Starting mock value
+let dislikeCount = 0;
+let userState = null; // 'liked', 'disliked', or null
+
+likeBtn.addEventListener('click', () => {
+    if (userState === 'liked') {
+        // Unlike
+        userState = null;
+        likeCount--;
+        likeBtn.classList.remove('active');
+    } else {
+        // Like (and remove dislike if present)
+        if (userState === 'disliked') {
+            dislikeCount--;
+            dislikeBtn.classList.remove('active');
+        }
+        userState = 'liked';
+        likeCount++;
+        likeBtn.classList.add('active');
+    }
+    updateSocialCounts();
+});
+
+dislikeBtn.addEventListener('click', () => {
+    if (userState === 'disliked') {
+        // Un-dislike
+        userState = null;
+        dislikeCount--;
+        dislikeBtn.classList.remove('active');
+    } else {
+        // Dislike (and remove like if present)
+        if (userState === 'liked') {
+            likeCount--;
+            likeBtn.classList.remove('active');
+        }
+        userState = 'disliked';
+        dislikeCount++;
+        dislikeBtn.classList.add('active');
+    }
+    updateSocialCounts();
+});
+
+function updateSocialCounts() {
+    likeCountSpan.textContent = likeCount;
+    dislikeCountSpan.textContent = dislikeCount;
+}
+
 // Event Listeners
 resetBtn.addEventListener('click', () => {
     initGame();

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1f2" />
+      <stop offset="100%" stop-color="#ffe4e6" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#g1)"/>
+  
+  <!-- Silhouette -->
+  <path d="M50 20 Q100 0 150 20 Q180 50 180 150 Q180 250 150 280 Q100 300 50 280 Q20 250 20 150 Q20 50 50 20" fill="#fff" opacity="0.4"/>
+
+  <!-- Esophagus -->
+  <path d="M100 40 L100 100" stroke="#fda4af" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Liver -->
+  <path d="M100 100 Q60 90 50 120 Q40 140 80 145 Z" fill="#9f1239" />
+
+  <!-- Stomach -->
+  <path d="M100 95 Q130 90 140 115 Q145 145 110 140 Q105 130 100 95" fill="#e11d48"/>
+
+  <!-- Large Intestine -->
+  <path d="M60 160 L60 150 Q60 140 80 140 M120 140 Q140 140 140 150 L140 220 Q140 240 100 245 Q60 240 60 220 Z" stroke="#be123c" stroke-width="14" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Small Intestine -->
+  <path d="M75 160 Q100 150 125 160 Q135 180 100 190 Q65 200 75 220 Q100 235 125 220" stroke="#fb7185" stroke-width="10" fill="none" stroke-linecap="round"/>
+  
+  <text x="100" y="280" font-family="sans-serif" font-size="20" fill="#881337" text-anchor="middle" font-weight="bold">Digestive System</text>
+</svg>
